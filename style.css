@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #15001b;
+}
+
+#leaderboard {
+    margin-right: 20px;
+    text-align: left;
+    color: white;
+}
+
+#game-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+#game-container {
+    justify-content: center;
+    display: flex;
+    width: 400px;
+    height: 600px;
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(255, 0, 251);
+}
+
+#score-container {
+    position: absolute;
+    right: -70px;
+    top: 320px;
+    color: rgb(167, 245, 255);
+    font-size: 80px;
+    padding: 0;
+    text-shadow: 0.5px 0.5px 5px rgba(0, 238, 255, 0.8);
+    white-space: nowrap;
+}
+
+#score {
+    margin-left: 0px;
+}
+
+#keybinds {
+    display: flex;
+    width: 400px;
+    height: 70px;
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(77, 109, 255, 0.8);
+}
+
+.column {
+    flex: 1;
+    border-right: 1px solid rgb(240, 226, 255);
+    position: relative;
+}
+
+.key {
+    flex: 1;
+    border-right: 1px solid rgb(240, 226, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    padding: 17px;
+    font-size: 20px;
+    color: rgb(255, 205, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.tile {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    transition: top 0.05s linear;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.glow {
+    border: 2px solid rgb(0, 255, 0);
+    box-shadow: 0 0 10px green;
+    transition: border-color 0.1s, box-shadow 0.1s;
+}
+
+#game-over-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 8, 34);
+    color: white;
+    padding: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 0 0 20px rgba(0, 68, 255, 0.9);
+    text-shadow: 0px 0px 50px rgb(255, 0, 217);
+    text-align: center;
+    z-index: 1000;
+    border: 2px solid rgba(255, 255, 255, 1)
+}
+
+.hidden {
+    display: none;
+}
+
+#try-again-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(234, 0, 230);
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#try-again-button:hover {
+    background-color: rgb(58, 83, 194);
+}
